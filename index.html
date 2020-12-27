@@ -1,0 +1,108 @@
+<html>
+        <style>
+			.container{
+			text-align: center;
+			}
+
+			.center {
+			  display: block;
+			  margin-left: auto;
+			  margin-right: auto;
+			  width: 60%;
+			}
+
+			.center1 {
+			  display: block;
+			  margin-left: 50%;
+			  margin-right: 40%;
+			  width: 20%;
+			}
+
+			table {
+			font-family: arial, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			}
+
+			td, th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+			}
+
+			tr:nth-child(even) {
+			background-color: #dddddd;
+			}
+			
+		</style>
+		<head>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+			<script>
+				function myFunction(){
+					var x = document.getElementById("data");
+					var object1 = document.getElementById("object1");
+					var object2 = document.getElementById("object2");
+					var button = document.getElementById("button");
+					object2.style.display = "block";
+					object1.style.display = "none";
+					button.style.display = "none";
+					setTimeout(function(){
+						object2.style.display = "none";
+						if(x.style.display==="none"){
+							x.style.display = "block";
+						} else {
+							x.style.display = "none";
+						}
+					 },5000);
+				}
+			</script>
+		</head>
+		<body>
+			<h1 style="text-align: center;">Welcome to SecHome<br><br></h1>
+			<form role = "form">	
+				<div class = "container">
+					<label style="text-align: center;" for = "aadharNo">Aadhar Number</label>
+					<input style="text-align: center;" type = "text" class = "form-control" id = "aadharNo" placeholder = "Enter Your Aadhar Number">
+					</div>
+				<p><br></p>
+				<div>
+					<div id="object1">
+						<img src="https://miro.medium.com/max/1050/1*ZGWXMiqjVcnuRXdytvgwmA.png" class="center">
+					</div>
+				   <div class="center1" id ="object2" style="display:none">
+					   <div class="spinner-border"></div>
+					</div>
+				</div>
+			</form>
+			<div class="container" id="button">
+				<button id="myButton" class = "btn btn-default" onclick="myFunction()">Scan</button>
+			</div>
+			<div id ="data" style="display:none">
+				<table id="displaytable">
+					<tr>
+						<th>Name</th>
+						<th>State</th>	
+						<th>Country</th>
+					</tr>
+					<tr>
+						<td>Anshul Kumar</td>
+						<td>Haryana</td>
+						<td>India</td>
+					</tr>
+					<tr>
+						<th>Phone-no</th>
+						<th>Address</th>	
+						<th>Criminal Records</th>
+					</tr>
+					<tr>
+						<td>8898989898</td>
+						<td>Falt no. B420, Amrapali Apartment, Huda City,Gurgaon, Haryana</td>
+						<td>Clean</td>
+					</tr>
+				</table>
+			</div>
+			</body>
+</html>
